@@ -17,7 +17,7 @@ def gameWin(Computer,You):
             return False
         if You=='w':
             return True
-print("Computer Turn: Snake(s) Water(w) or Gun(g)\n?")
+#print("Computer Turn: Snake(s) Water(w) or Gun(g)\n?")
 random_No=random.randint(1,3)
 if random_No==1:
     Computer='s'
@@ -25,12 +25,12 @@ elif random_No==2:
     Computer='w'
 elif random_No==3:
     Computer='g'
-You=input("Your Turn: Snake(s) Water(w) Gun(g)?\n")
+You=input("Your Turn: Snake(s) Water(w) Gun(g)?: ")
 a=gameWin(Computer,You)
 print(f"Computer chose: {Computer}")
 print(f"You chose: {You}")
 if a==None:
-    print("The game is a tie!")
+    print("The game is tie!")
 elif a:
     print("You Win!")
 else:
